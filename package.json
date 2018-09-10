@@ -1,0 +1,36 @@
+{
+  "name": "es6",
+  "version": "1.0.0",
+  "description": "",
+  "main": "proxy.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prod": "./node_modules/.bin/webpack --colors --progress --mode=production ",
+    "build": "./node_modules/.bin/webpack --colors --progress --mode=development ",
+    "watch": "npm run build -- --watch",
+    "server": "./node_modules/.bin/webpack-dev-server --inline --open --hot",
+    "lint": "./node_modules/.bin/eslint app.js",
+    "precommit": "npm run lint"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-es2015-native-modules": "^6.9.4",
+    "eslint": "^5.4.0",
+    "husky": "^0.14.3",
+    "webpack": "^4.17.1",
+    "webpack-cli": "^3.1.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.10",
+    "webpack-dev-server": "^3.1.6"
+  }
+}
